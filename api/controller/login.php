@@ -8,8 +8,8 @@ define('ACC', true);
 require('./include/init.php');
 
 
-$u = $_POST['username'];
-$p = $_POST['passwd'];
+$u = strval($_POST['username'] ?? '');
+$p = strval($_POST['passwd'] ?? '');
 
 //合法性检测
 
@@ -23,7 +23,6 @@ if (empty($row)) {
 	$resp["msg"] = '登陆成功';
 	$resp["code"] = 200;
 	$_SESSION["FPHPX"] = true;
-	session_start();
 	$_SESSION = $row;
 }
 
