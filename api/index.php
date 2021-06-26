@@ -45,6 +45,9 @@ if (strpos($router, '/admin/') !== false) {
         case '/admin/new_list':
             require_once("./controller/new_class.php");
             break;
+        case '/admin/stu_list':
+            require_once("./controller/get_class_list.php");
+            break;
     }
 }
 
