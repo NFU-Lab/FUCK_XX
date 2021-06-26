@@ -10,7 +10,7 @@ define('DEBUG', true);
 require ROOT . 'include/helper.php';
 require ROOT . '/vendor/autoload.php';
 require ROOT . '/include/init_database.php';
-
+$salt = 'yyds';
 //开启session
 session_start();
 

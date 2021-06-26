@@ -9,18 +9,16 @@ $p = strval($_POST['password'] ?? '');
 
 //核对用户名密码
 
-$salt = 'fuck';
-
 $password = $result = md5(md5($p) . $salt);
 
 
-$user = DB::table('user')->where(array('username' => $u))->first();
+$user = DB::table('admin')->where(array('username' => $u))->first();
 if (empty($user)) {
-    if (DB::table('user')->insert(array("username" => $u, "password" => $p))) {
+    if (DB::table('admin')->insert(array("username" => $u, "password" => $password))) {
         exit(successResponse());
     } else {
-        exit(failResponse("user register failed"));
+        exit(failResponse("admin register failed"));
     }
 } else {
-    exit(failResponse("user already exist"));
+    exit(failResponse("admin already exist"));
 }

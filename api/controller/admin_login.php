@@ -9,8 +9,6 @@ $p = strval($_POST['password'] ?? '');
 
 //核对用户名密码
 
-$salt = 'fuck';
-
 $password = $result = md5(md5($p) . $salt);
 
 $user = DB::table('admin')->where('username', $u)->first();
