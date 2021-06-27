@@ -16,10 +16,10 @@ $arr = array();
 foreach ($cur as $r) {
     array_push($arr, array(
         "status" => $r->status,
-        "name" => $r->name,
         "class" => $r->class,
         "stu_no" => $r->stuno,
         "date" => $r->date,
+        "name" => $r->name,
     ));
 }
 

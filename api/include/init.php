@@ -9,7 +9,7 @@ header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); // 允许请求�
 header('Access-Control-Allow-Credentials: true'); // 设置是否允许发送 cookies
 header('Access-Control-Allow-Headers: Content-Type,Content-Length,Accept-Encoding,X-Requested-with, Origin'); // 设置允许自定义请求头的字段
 ini_set('session.cookie_samesite', 'None');
-ini_set('session.cookie_secure', true);
+//ini_set('session.cookie_secure', true);
 // 初始化当前的绝对路径
 define('ROOT', dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
 define('DEBUG', true);
