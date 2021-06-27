@@ -11,13 +11,13 @@ $r = DB::table('status')->where(array('stuno' => $u, 'class' => $c, 'date' => $d
 
 try {
     if (empty($r)) {
-        if (DB::table('status')->insert(array('stuno' => $u, 'class' => $c, 'date' => $d, 'status' => $s))) {
+        if (DB::table('status')->insert(array('stuno' => $u, 'class' => $c, 'date' => $d, 'status' => $s, 'name' => ""))) {
             exit(successResponse());
         } else {
             exit(failResponse("change status failed"));
         }
     } else {
-        if (DB::table('status')->update(array('stuno' => $u, 'status' => $s, 'date' => $d))) {
+        if (DB::table('status')->update(array('stuno' => $u, 'status' => $s, 'date' => $d, 'name' => ""))) {
             exit(successResponse());
         } else {
             exit(failResponse("change status failed"));
