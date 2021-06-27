@@ -7,7 +7,7 @@ $c = $_POST["class"];
 $d = $_POST["date"];
 
 $q = array('class' => $c);
-if ($d >= -1) {
+if ($d > -1) {
     $q["date"] = $d;
 }
 
